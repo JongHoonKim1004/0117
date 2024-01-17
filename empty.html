@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="crossorigin="anonymous"></script>
+    <style>
+        /* 베스트셀러 & 인기검색어 */
+#bestseller {width:239px; height:389px; border:1px solid #d8d8d8; float: right;}
+#bestseller-btn-div {width:238px; height:30px; position:relative; }
+#bestseller-btn {border-right: 1px solid #d8d8d8;}
+.bestseller-btn {width:119px; height:30px; float:left;text-align: center; padding-top: 5px; border-bottom:1px solid #d8d8d8;}
+.bestseller-btn > a {color:#999; font-size: 12px;}
+.bestseller-main {width:238px; height:359px; position:absolute; top:30px; left:0px; padding:0 15px;}
+#bestseller-selector {width:208px; height:23px; margin:10px 0; border:1px solid #d8d8d8;}
+.bestseller-ranking-div {width:208px; height:305px; text-align:left;}
+.bestseller-ranking-div > h3 {display: inline-block; font-size: 11px; line-height:20px; color:#999; cursor: pointer;}
+.bestseller-see-more {font-size: 11px; float:right;}
+.bestseller-see-more > a {font-size: 11px; float:right; line-height: 20px;}
+.bestseller-ranking {width:208px; height:280px; position: absolute; top:68px; left:15px; }
+.bestseller-ranking-mini {width:206px; height:55px;}
+.bestseller-number {width:25px; height:53px; float:left;}
+.bestseller-number > img {width:20px; height:20px; margin:5px 0 0 2.5px}
+.bestseller-intro {width:179px; height:53px; float:right;}
+.bestseller-intro > img {width:50px; height:50px; float:left; margin:0 5px;}
+.bestseller-intro > h3 {font-size: 12px; line-height: 14px; color:black; font-weight: bold;}
+.bestseller-intro > p {font-size: 11px; line-height: 13px; color: #999;}
+    </style>
+</head>
+<body>
+    <div class="bestseller-ranking-div">
+        <h3 class="num">1~5위</h3>
+        <p></p>
+        <!--<em style="font-size:10px; color:#555; padding:0 5px;">|</em>-->
+        <h3 class="num">6~10위</h3>
+        <a href="#" class="bestseller-see-more">더보기</a>
+        <div class="bestseller-ranking">
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/9024794_number_square_one_light_icon.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>1초라도 안보이면 2렇게 소중한데</h3>
+                    <p>3초는 어떻게 기다려</p>
+                </div>
+            </a></div>
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/9024578_number_square_two_light_icon.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>1초라도 안보이면 2렇게 소중한데</h3>
+                    <p>3초는 어떻게 기다려</p>
+                </div>
+            </a></div>
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/9024799_number_square_three_light_icon.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>1초라도 안보이면 2렇게 소중한데</h3>
+                    <p>3초는 어떻게 기다려</p>
+                </div>
+            </a></div>
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/9024726_number_square_four_light_icon.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>4랑해 널 사랑해</h3>
+                    <p>5늘은 말 할거야</p>
+                </div>
+            </a></div>
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/9024637_number_square_five_light_icon.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>1초라도 안보이면 2렇게 소중한데</h3>
+                    <p>3초는 어떻게 기다려</p>
+                </div>
+            </a></div>
+        </div>
+        <div class="bestseller-ranking">
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/9024577_number_square_six_light_icon.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>60억 지구에서 널 만난건</h3>
+                    <p>7 럭키야</p>
+                </div>
+            </a></div>
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/9024576_number_square_seven_light_icon.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>1초라도 안보이면 2렇게 소중한데</h3>
+                    <p>3초는 어떻게 기다려</p>
+                </div>
+            </a></div>
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/9024793_number_square_eight_light_icon.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>1초라도 안보이면 2렇게 소중한데</h3>
+                    <p>3초는 어떻게 기다려</p>
+                </div>
+            </a></div>
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/9024795_number_square_nine_light_icon.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>1초라도 안보이면 2렇게 소중한데</h3>
+                    <p>3초는 어떻게 기다려</p>
+                </div>
+            </a></div>
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/ios-10.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>1초라도 안보이면 2렇게 소중한데</h3>
+                    <p>3초는 어떻게 기다려</p>
+                </div>
+            </a></div>
+        </div>
+        <div class="bestseller-ranking">
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/9024577_number_square_six_light_icon.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>60억 지구에서 널 만난건</h3>
+                    <p>7 럭키야</p>
+                </div>
+            </a></div>
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/9024576_number_square_seven_light_icon.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>1초라도 안보이면 2렇게 소중한데</h3>
+                    <p>3초는 어떻게 기다려</p>
+                </div>
+            </a></div>
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/9024793_number_square_eight_light_icon.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>1초라도 안보이면 2렇게 소중한데</h3>
+                    <p>3초는 어떻게 기다려</p>
+                </div>
+            </a></div>
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/9024795_number_square_nine_light_icon.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>1초라도 안보이면 2렇게 소중한데</h3>
+                    <p>3초는 어떻게 기다려</p>
+                </div>
+            </a></div>
+            <div class="bestseller-ranking-mini"><a href="#">
+                <div class="bestseller-number">
+                    <img alt="number" src="img/ios-10.png">
+                </div>
+                <div class="bestseller-intro">
+                    <img alt="introduction" src="img/107153_circle_facebook_icon.png">
+                    <h3>1초라도 안보이면 2렇게 소중한데</h3>
+                    <p>3초는 어떻게 기다려</p>
+                </div>
+            </a></div>
+        </div>
+    </div>
+    <script>
+        /* 베스트셀러 1~5위 & 6~10위 화면전환 */
+$(function(){
+    var index;
+    var rank = $(".num");
+    var div = $(".bestseller-ranking");
+
+    div.hide();
+    rank.css({fontWeight:"",color:""});
+
+    div.eq(1).show();
+    rank.eq(1).css({fontWeight:"bold",color:"black"});
+
+    rank.click(function(){
+        div.hide();
+        rank.css({fontWeight:"",color:""});
+        console.log($(this).index());
+        index = $(this).index();
+        div.eq(index).show();
+        rank.eq(index).css({fontWeight:"bold",color:"black"});
+    });
+});
+    </script>
+</body>
+</html>
